@@ -53,12 +53,12 @@ export default function HomeHero() {
         "APIs"
     ]
     const primaryButtonText = "Blog"
-    const secondaryButtonUrl = "#componentDemos"
-    const secondaryButtonText = "Portfolio"
+    // const secondaryButtonUrl = "#componentDemos"
+    // const secondaryButtonText = "Portfolio"
     const buttonRoundedCss = ""
     const heading = "Hi, I'm Ben Math!"
     const description = "I'm an aspiring superhero who loves to code, living in NYC. I have been working with websites since I was a child, using code for marketing solutions since 2013, and working as a software engineer since 2020. I strive to learn about all areas of software development so I can add value to any project. I like making great things happen with collaborative and passionate teams of good people."
-    const primaryButtonUrl ="/blog"
+    const primaryButtonUrl = "/blog"
     return (<>
 
         <HeroRow>
@@ -73,13 +73,16 @@ export default function HomeHero() {
                         </Feature>
                     ))}
                 </FeatureList>
-                <Actions><Link to={primaryButtonUrl}>
-                    <PrimaryButton css={buttonRoundedCss} href={primaryButtonUrl}>
+                {/* <Actions> */}
+                    {/* <Link to={primaryButtonUrl}><a href="google.com"> */}
+                    {/* <PrimaryButton css={buttonRoundedCss}> */}
+                    {/* <a href="/blog">
                         {primaryButtonText}
-                    </PrimaryButton>
-                </Link>
-                    <SecondaryButton href={secondaryButtonUrl}>{secondaryButtonText}</SecondaryButton>
-                </Actions>
+                    </a> */}
+                    {/* </PrimaryButton> */}
+                    {/* </Link> */}
+                    {/* <SecondaryButton href={secondaryButtonUrl}>{secondaryButtonText}</SecondaryButton> */}
+                {/* </Actions> */}
             </TextColumn>
             <ImageColumn>
                 <ImageContainer>
