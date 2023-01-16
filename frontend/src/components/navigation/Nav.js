@@ -28,8 +28,8 @@ function Navigation() {
                     Projects
                 </NavLink> */}
                 <NavLink href="/">
-                Home
-              </NavLink>
+                    Home
+                </NavLink>
                 <NavLink href="/blog">
                     Blog
                 </NavLink>
@@ -38,9 +38,9 @@ function Navigation() {
                 </NavLink>
 
                 <NavLink target="_blank" href="#">
-                <a href="#endpoint for resume" download="success">
-                    Resume
-                </a>
+                    <a href="https://docs.google.com/document/d/17JA9cJ-SORMmOwBwrK2uofu6XVnVmqTvXo8fTVGIs6s/edit?usp=sharing" download="success">
+                        Resume
+                    </a>
                 </NavLink>
                 <div tw="md:hidden flex-100 h-0"></div>
                 <PrimaryNavLink href="/contact">

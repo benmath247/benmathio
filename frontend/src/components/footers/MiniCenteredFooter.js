@@ -38,7 +38,7 @@ export default () => {
           <LinksContainer>
             <Link href="/">Home</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="#endpoint for resume" target="_blank" download="success">Resume</Link>
+            <Link href="https://docs.google.com/document/d/17JA9cJ-SORMmOwBwrK2uofu6XVnVmqTvXo8fTVGIs6s/edit?usp=sharing" target="_blank">Resume</Link>
             <Link href="/contact">Contact</Link>
           </LinksContainer>
           <SocialLinksContainer>
