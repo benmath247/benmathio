@@ -5,6 +5,7 @@ from ckeditor.fields import RichTextField
 import django
 from datetime import date
 
+
 # Create your models here.
 class User(django.contrib.auth.models.User):
     def __str__(self):
@@ -47,3 +48,15 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["created"]
+
+
+class ContactUs(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(max_length=254)
+    subject = models.CharField(max_length=20)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.subject
+
+

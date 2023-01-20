@@ -134,7 +134,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+LOGO_122_SERVER_PATH = 'http://122.160.74.251:3006/12.png'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
