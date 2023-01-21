@@ -42,13 +42,13 @@ export default () => {
             <Link href="/contact">Contact</Link>
           </LinksContainer>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            <SocialLink href="https://www.github.com/benmath247">
               <FacebookIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com/benmath247">
+            <SocialLink href="https://www.twitter.com/benmath247">
               <TwitterIcon />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
+            <SocialLink href="https://www.instagram.com/benmath.247">
               <YoutubeIcon />
             </SocialLink>
           </SocialLinksContainer>
