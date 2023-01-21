@@ -17,10 +17,10 @@ export default ({
      * Using gtag like this because we only want to use Google Analytics when Main Landing Page is rendered
      * Remove this part and the the gtag script inside public/index.html if you dont need google analytics
      */
-    useEffect(() => {
-        window.gtag("js", new Date());
-        window.gtag("config", "UA-45799926-9");
-    }, [])
+    // useEffect(() => {
+    //     window.gtag("js", new Date());
+    //     window.gtag("config", "UA-45799926-9");
+    // }, [])
 
 
     features = features || [
@@ -41,7 +41,7 @@ export default ({
                 <Content2Xl>
                     <Navigation />
                     {/* <FullWidthWithImage/> */}
-                    <PrivacyPolicy/>
+                    <PrivacyPolicy />
                 </Content2Xl>
             </Container>
         </AnimationRevealPage>

@@ -32,7 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
-
+SEND_GRID_API_key = os.getenv("SENDGRID_API_KEY")
+SEND_GRID_FROM_EMAIL = "ben@benmath.io"
 # Application definition
 
 INSTALLED_APPS = [
@@ -95,11 +96,11 @@ WSGI_APPLICATION = "blog_backend.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": 'my_database',
-        "USER": os.getenv('MYSQL_ROOT_USERNAME'),
+        "NAME": "my_database",
+        "USER": os.getenv("MYSQL_ROOT_USERNAME"),
         "PASSWORD": os.getenv("MYSQL_PASSWORD"),
         "HOST": "localhost",
-        "PORT": '3306'
+        "PORT": "3306",
     }
 }
 
@@ -134,7 +135,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGO_122_SERVER_PATH = 'http://122.160.74.251:3006/12.png'
+LOGO_122_SERVER_PATH = "http://122.160.74.251:3006/12.png"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
@@ -145,5 +146,7 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_ALL_ORIGINS = (
+    True  # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+)
 CORS_ALLOW_CREDENTIALS = True

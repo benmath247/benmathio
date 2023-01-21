@@ -103,7 +103,7 @@ export default () => {
               <CardImage imageSrc={card.imageSrc} />
               <TextInfo>
                 <TitleReviewContainer>
-                  <Link to={card.slug}>
+                  <Link to={'view-post/'+card.slug}>
                   <Title><a href={card.url}>{card.title}</a></Title></Link>
                   {/* <RatingsInfo>
                     <StarIcon />
