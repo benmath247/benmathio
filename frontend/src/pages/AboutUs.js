@@ -30,15 +30,15 @@ export default () => {
         heading="Holy microchip, Batman!"
         buttonRounded={false}
         primaryButtonText="See Blog"
-        imageSrc="https://www.seekpng.com/png/detail/66-661906_robin-clipart-transparent-background-batman-and-robin-png.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
+        imageSrc="https://benmathdotio.s3.amazonaws.com/batman.png"
         primaryButtonUrl="blog/"
-        />
+      />
       <MainFeature1
         subheading={<Subheading>About BenMath</Subheading>}
         heading="A hero can be anyone"
         buttonRounded={false}
         primaryButtonText="Contact"
-        imageSrc="https://thumbs.dreamstime.com/z/superhero-coding-d-illustration-superhero-coding-d-illustration-108938036.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
+        imageSrc="https://benmathdotio.s3.amazonaws.com/superman.png"
         // https://www.dreamstime.com/superhero-coding-d-illustration-superhero-coding-d-illustration-image108938036
         textOnLeft={false}
       />

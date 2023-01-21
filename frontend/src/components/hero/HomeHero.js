@@ -11,7 +11,7 @@ import { SectionDescription as DescriptionBase } from "components/misc/Typograph
 import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-circle.svg";
 
 
-import heroScreenshotImageSrc from "images/programmer2.jpeg";
+// import heroScreenshotImageSrc from "images/programmer2.jpeg";
 
 const Row = tw.div`flex`;
 
@@ -83,7 +83,7 @@ export default function HomeHero() {
             </TextColumn>
             <ImageColumn>
                 <ImageContainer>
-                    <Image src={heroScreenshotImageSrc} />
+                    <Image src="https://benmathdotio.s3.amazonaws.com/programmer2-transformed.jpeg" />
                 </ImageContainer>
             </ImageColumn>
         </HeroRow>
