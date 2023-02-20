@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
     posts = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    username = serializers.CharField()
 
     class Meta:
         model = User
-        fields = ["id", "username", "posts"]
+        fields = ["posts", "username"]

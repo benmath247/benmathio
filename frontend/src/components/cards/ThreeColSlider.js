@@ -80,7 +80,7 @@ export default () => {
       let resp = await axios.get("http://localhost:8000/posts/")
       setBlogList(resp.data.reverse())
     } catch (e) {
-      console.log(e)
+      console.log(e.text)
     }
   }
   useEffect(() => {
@@ -103,8 +103,8 @@ export default () => {
               <CardImage imageSrc={card.imageSrc} />
               <TextInfo>
                 <TitleReviewContainer>
-                  <Link to={'view-post/'+card.slug}>
-                  <Title><a href={card.url}>{card.title}</a></Title></Link>
+                  <Link to={'blog/' + card.slug}>
+                    <Title><a href={card.url}>{card.title}</a></Title></Link>
                   {/* <RatingsInfo>
                     <StarIcon />
                     <Rating>{card.rating}</Rating>

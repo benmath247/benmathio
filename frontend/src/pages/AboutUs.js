@@ -38,7 +38,7 @@ export default () => {
         heading="A hero can be anyone"
         buttonRounded={false}
         primaryButtonText="Contact"
-        imageSrc="https://benmathdotio.s3.amazonaws.com/superman.png"
+        imageSrc="https://benmathdotio.s3.amazonaws.com/superhero-sitting.png"
         // https://www.dreamstime.com/superhero-coding-d-illustration-superhero-coding-d-illustration-image108938036
         textOnLeft={false}
       />

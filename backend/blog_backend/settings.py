@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-hn3iq9=s7$#ha*qf1u18d=$yg=l=qs&b47@fqjfts9oq(uzw4*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "*"]
 
 SEND_GRID_API_key = os.getenv("SENDGRID_API_KEY")
 SEND_GRID_FROM_EMAIL = "ben@benmath.io"
@@ -93,11 +93,21 @@ WSGI_APPLICATION = "blog_backend.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "database-1",
+#         "USER": "admin",
+#         "PASSWORD": "6!",
+#         "HOST": "database-1.cix6owgsenhi.us-east-1.rds.amazonaws.com",
+#         "PORT": "3306",
+#     }
+# }
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "my_database",
-        "USER": os.getenv("MYSQL_ROOT_USERNAME"),
+        "USER": "root",
         "PASSWORD": os.getenv("MYSQL_PASSWORD"),
         "HOST": "localhost",
         "PORT": "3306",

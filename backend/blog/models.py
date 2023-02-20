@@ -43,7 +43,7 @@ class Post(models.Model):
         return f"/blog/{self.slug}/"
 
     def save(self, *args, **kwargs):
-        self.slug = "blog/" + slugify(self.title)
+        self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
 
     class Meta:
@@ -58,5 +58,3 @@ class ContactUs(models.Model):
 
     def __str__(self):
         return self.subject
-
-

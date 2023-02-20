@@ -12,6 +12,7 @@ import TwoColumnWithPrimaryBackground from "components/hero/TwoColumnWithPrimary
 import TwoColumnWithFeaturesAndTestimonial from "components/hero/TwoColumnWithFeaturesAndTestimonial";
 import MiniCenteredFooter from "components/footers/MiniCenteredFooter";
 import axios from "axios";
+import { SelectField } from "react-admin";
 
 function BlogDetail() {
   const Subheading = tw(SubheadingBase)`mb-4`;
@@ -47,6 +48,7 @@ function BlogDetail() {
   async function fetchBlog() {
     try {
       let res = await axios.get(`http://localhost:8000/posts/${slug}`)
+      console.log(res.data)
       setBlog(res.data)
     } catch (e) {
       console.log(e)
@@ -58,7 +60,7 @@ function BlogDetail() {
   }, [])
 
   // export default ({ body="body", subheading="This is a subheading", dateCreate="1/2/32", owner="Ben Math"}) => {
-    console.log(blog)
+  // console.log(blog)
   return (
     <AnimationRevealPage>
       <Container>
@@ -66,11 +68,11 @@ function BlogDetail() {
           <HeadingRow>
             <Heading>{blog.title}</Heading>
           </HeadingRow>
-          <Subheading><em>{blog.created}</em> | {blog.owner}</Subheading>
+          <Subheading><em>{blog.created}</em></Subheading>
           <Subheading>{blog.description}</Subheading>
           <Text>
-          <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }} />
-            <br/><br/><br/><br/>
+            <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }} />
+            <br /><br /><br /><br />
           </Text>
         </Content2Xl>
       </Container>

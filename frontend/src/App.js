@@ -23,7 +23,7 @@ export default function App() {
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/about" element={<AboutUs />} />
 
-          <Route path="/view-post/:slug" element={<BlogDetails />} />
+          <Route path="/blog/:slug" element={<BlogDetails />} />
           {/* <Route path="/blog2" element={<PopularAndRecentBlogPosts />} /> */}
           <Route path="/blog" element={<PopularAndRecentBlogPosts />} />
           <Route path="/contact" element={<ContactUs />} />

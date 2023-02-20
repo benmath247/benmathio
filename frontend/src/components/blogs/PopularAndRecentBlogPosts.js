@@ -196,7 +196,7 @@ export default function BlogIndex() {
                       />
                       <Title>{post.title}</Title>
                       {/* <p>{console.log(post.category1)}</p> */}
-                      {/* <Description>{post.description}</Description>
+            {/* <Description>{post.description}</Description>
                       <AuthorInfo>
                         <AuthorImage src={post.authorImageSrc} />
                         <AuthorNameAndProfession>
@@ -208,7 +208,7 @@ export default function BlogIndex() {
                   ))}
                 </PostsContainer>
               </PopularPostsContainer> */}
-              {/* <RecentPostsContainer>
+            {/* <RecentPostsContainer>
                 <Heading>Topics</Heading>
                 {CategoriesList.map((category) => (
                   <>
@@ -225,9 +225,9 @@ export default function BlogIndex() {
                 <Column key={title}>
                   <Card>
                     <Image $imageSrc={post.imageSrc} onClick='#' />
-                    <Category>{post.category}</Category>
+                    <Category>{post.category.name}</Category>
                     <Title>{post.title}</Title>
-                    <Link href={`/view-post/${post.slug}`}>Read Post</Link>
+                    <Link href={`blog/${post.slug}`}>Read Post</Link>
                   </Card>
                 </Column>
               ))}
