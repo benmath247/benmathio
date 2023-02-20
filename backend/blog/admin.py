@@ -7,5 +7,9 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ("name", "image")
+
+
 admin.site.register(Post, PostAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)

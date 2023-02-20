@@ -8,6 +8,9 @@ from datetime import date
 
 # Create your models here.
 class User(django.contrib.auth.models.User):
+    profile_image = models.URLField(null=True)
+    cover_photo = models.URLField(null=True)
+
     def __str__(self):
         return self.first_name + " " + self.last_name
 
@@ -29,7 +32,9 @@ class Post(models.Model):
     title = models.CharField(max_length=100, blank=True, default="")
     description = models.CharField(max_length=180)
     body = RichTextField()
-    category = models.ManyToManyField(Category, blank=True, related_name="category")
+    category = models.ForeignKey(
+        "Category", blank=True, null=True, related_name="category", on_delete=models.PROTECT
+    )
     featured = models.BooleanField(default=False)
     visible = models.BooleanField(default=True)
     owner = models.ForeignKey("auth.User", null=True, on_delete=models.CASCADE)

@@ -1,5 +1,6 @@
 backend/.env
 backend/venv/
+backend/blog/migrations/
 mysql/
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.

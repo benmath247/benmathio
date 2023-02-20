@@ -225,7 +225,7 @@ export default function BlogIndex() {
                 <Column key={title}>
                   <Card>
                     <Image $imageSrc={post.imageSrc} onClick='#' />
-                    <Category>{post.category.name}</Category>
+                    <Category>{post.category}</Category>
                     <Title>{post.title}</Title>
                     <Link href={`blog/${post.slug}`}>Read Post</Link>
                   </Card>

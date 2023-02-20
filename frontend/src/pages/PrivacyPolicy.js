@@ -45,11 +45,13 @@ function BlogDetail() {
 
   let { slug } = useParams();
   const [blog, setBlog] = useState({})
+  const [name, setName] = useState("")
   async function fetchBlog() {
     try {
       let res = await axios.get(`http://localhost:8000/posts/${slug}`)
       console.log(res.data)
       setBlog(res.data)
+      setName(`${res.data.owner.first_name} ${res.data.owner.last_name}`)
     } catch (e) {
       console.log(e)
     }
@@ -68,7 +70,7 @@ function BlogDetail() {
           <HeadingRow>
             <Heading>{blog.title}</Heading>
           </HeadingRow>
-          <Subheading><em>{blog.created}</em></Subheading>
+          <Subheading><em>{blog.created}</em> | {name} </Subheading>
           <Subheading>{blog.description}</Subheading>
           <Text>
             <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }} />
